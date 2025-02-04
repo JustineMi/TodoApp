@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import TodoApp from './TodoApp'
 import Form from './Form'
 import './App.css'
+import QuentinImage from "./src/Quentin1.jpg"
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -58,7 +59,7 @@ function App() {
       {showPopup && (
         <div className="popup">
           <div className="popup-content">
-            <img src="./pic/Quentin1.jpg" alt="congratulations" />
+            <img src={QuentinImage} alt="Quentin à Infrabel" />
             <button onClick={closePopup}>Congratulations, you're done!</button>
           </div>
         </div>
