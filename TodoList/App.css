@@ -1,5 +1,7 @@
 html, body{
   background-color: #d9c6eb;
+  background-image: url(Back9.jpg);
+  background-size: 30vw;
 }
 
 #root {
@@ -12,7 +14,8 @@ html, body{
   display: flex;
   justify-content: space-around;
   border-radius: 30px;
-
+  border: 5px solid #f8ebf9;
+  border-radius: 15px;
 }
 
 .todo-item{
@@ -20,7 +23,7 @@ html, body{
   justify-content: space-between;
   margin-bottom: 10px;
   background-color: rgba(94, 27, 95, 0.245);
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 .todo-item p{
@@ -38,9 +41,9 @@ html, body{
 
  button {
   color: #f8ebf9;
-  background-color: rgba(82, 57, 102, 0.14);
-  border-radius: 40px;
-  margin-left: 50px;
+  background-color: rgba(173, 218, 255, 0.715);
+  border-radius: 30px;
+  margin-left: 10px;
 
 }
 
@@ -82,11 +85,11 @@ input[type="checkbox"]::before{
 
 input[type="checkbox"]:checked::before{
   content: "\2713";
-  background-color: rgb(120, 4, 165);
+  background-color: rgb(134, 194, 243);
 }
 
 input[type="text"]{
-  background: rgb(129, 77, 137);
+  background: rgba(173, 218, 255, 0.315);
   width: 200px;
   height: 30px;
   text-align: center;
@@ -158,4 +161,32 @@ form input[type="text"]{
 
 .popup-content button:hover {
   background-color: rgb(120, 4, 165);
+}
+
+
+.confirmation-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-popup-content {
+  color: rgb(255, 255, 255);
+  background-color: rgb(145, 91, 166);
+  border: 2px solid #f8ebf9;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.confirmation-popup button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color:rgba(94, 27, 95, 0.519);
 }

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 
-function Form({ addTask }) {
+
+function Form({ addTask, checkAll, openConfirmation}) {
   const inputRef = useRef()
 
   const handleSubmit = (event) => {
@@ -9,6 +10,7 @@ function Form({ addTask }) {
     addTask(newText)
     inputRef.current.value = ''
   }
+  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -17,7 +19,9 @@ function Form({ addTask }) {
         ref={inputRef}
         placeholder="Write a new task to do"
       />
+      <button type='button' onClick={checkAll}>Check all tasks</button>
       <button type="submit">Add task</button>
+      <button type="button" onClick={openConfirmation}>Delete all tasks</button>
     </form>
   )
 }
