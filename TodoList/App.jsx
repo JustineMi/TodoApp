@@ -3,7 +3,7 @@ import TodoApp from './TodoApp'
 import Form from './Form'
 import './App.css'
 import QuentinImage from "./src/Quentin1.jpg"
-import Calendar from "react-calendar"
+
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -74,7 +74,7 @@ function App() {
     closeConfirmation()
   }
 
-  const [date, onChange] = useState<date>(new Date())
+
 
   return (
     <div className="App">
@@ -98,9 +98,14 @@ function App() {
             </div>
           </div>
       )}
-      <Calendar onChange={onChange} date={date}/>
     </div>
   )
 }
 
 export default App
+
+/*for calendar:
+import Calendar from "react-calendar"
+  const [date, onChange] = useState<date>(new Date())
+<Calendar onChange={onChange} date={date}/>
+*/
