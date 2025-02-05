@@ -74,6 +74,8 @@ function App() {
     closeConfirmation()
   }
 
+  const [date, onChange] = useState<date>(new Date())
+
   return (
     <div className="App">
       <h1>My Todo App</h1>
@@ -96,6 +98,7 @@ function App() {
             </div>
           </div>
       )}
+      <Calendar onChange={onChange} date={date}/>
     </div>
   )
 }
